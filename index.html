@@ -1,1 +1,160 @@
-<h1>hello 2</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Git Tutorial</title>
+    <style>
+      code {
+        background: rgb(240, 240, 240);
+        color: red;
+        padding: 2px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Installation</h1>
+    <p>
+      Go to <code>https://git-scm.com/download/win</code> link for windows,
+      download and install the git on your machine.
+    </p>
+    <hr />
+    <h2>Git commands for beginners and their details</h2>
+    <ol>
+      <li>
+        <code>git init</code>
+        <p>
+          The git init command creates a new Git repository. It can be used to
+          convert an existing, unversioned project to a Git repository or
+          initialize a new, empty repository.
+        </p>
+      </li>
+      <li>
+        <code>git config --global user.name 'FirstName LastName'</code><br />
+        <code>git config --global user.email 'XXXX@XXXX.com'</code>
+        <p>
+          The first thing you should do when you install Git is to set your user
+          name and email address.
+        </p>
+      </li>
+      <li>
+        <code>git status</code>
+        <p>
+          Displays the state of the working directory and the staging area. It
+          lets you see which changes have been staged, which haven't, and which
+          files aren't being tracked by Git. Status output does not show you any
+          information regarding the committed project history..
+        </p>
+      </li>
+      <li>
+        <code>git add index.html</code><br />
+        <code>git add folder</code><br />
+        <code>git add .</code><br />
+        <p>
+          Displays the state of the working directory and the staging area. It
+          lets you see which changes have been staged, which haven't, and which
+          files aren't being tracked by Git. Status output does not show you any
+          information regarding the committed project history..
+        </p>
+      </li>
+      <li>
+        <code>git rm --cached index.html</code><br />
+        <code>git rm --cached folder</code>
+        <p>
+          Removes a file from the staging area. Opposite process of previous
+          steps.
+        </p>
+      </li>
+      <li>
+        <code>git commit -m 'commit_messages'</code>
+        <p>
+          Used to move files from the staging area to a commit. This command is
+          run after git add, which is used to add files to the staging area.
+        </p>
+      </li>
+      <li>
+        <code>git log</code>
+        <p>
+          shows a list of all the commits made to a repository. You can see the
+          hash of each Git commit, the message associated with each commit, and
+          more metadata.
+        </p>
+      </li>
+      <li>
+        <code>git checkout 145229ad305af5c8a44d48459b4cfbdd4e72d547</code
+        >(commit hash id)<br />
+        <code>git checkout master</code><br />
+        <code>git checkout other_branch</code>
+
+        <p>Go to previous commit or master branch or any other branch.</p>
+      </li>
+      <li>
+        <code>git branch new_branch</code>(Only create new branch.) <br />
+        <code>git checkout -b new_branch</code>
+        <p>At first create the branch if not exits, then switch the branch</p>
+      </li>
+      <li>
+        <code>git checkout master</code> (Go to master branch) <br />
+        <code>git merge new_branch</code>
+        <p>Merge the Master branch to others branch</p>
+      </li>
+    </ol>
+    <hr />
+    <h2>gitignore</h2>
+    <ol>
+      <li>
+        <code>touch .gitignore</code>
+        <p>Create the .gitignore file on the curent directory</p>
+      </li>
+      <li>
+        <code>tmp.txt</code><br />
+        <code>database.sql</code><br />
+        <p>
+          Add the files or directories, that you want to hide for git to look.
+        </p>
+      </li>
+      <li>
+        <code>git status</code><br />
+        <code>git add .</code><br />
+        <code>git commit -m 'added to gitignore'</code><br />
+        <code>git status</code>
+        <p>Add to staging area and commit them.</p>
+      </li>
+    </ol>
+    <hr />
+    <h2>Connecting to your repository</h2>
+    <ol>
+      <li>
+        <code>git remote</code><br />
+        <code
+          >git remote add origin
+          https://github.com/username/repository_name.git</code
+        >
+        <p>Copy the repository url link from any github project</p>
+      </li>
+
+      <li>
+        <code>git push -u origin master </code>
+        <p>
+          Connect your project to the github account. Sign in if required. Then,
+          pushes to the repository. From the next time to push the project run
+          commands <code>git push</code>
+        </p>
+      </li>
+      <li>
+        <code>git push</code>
+        <p>Upload local repository content to a remote repository.</p>
+      </li>
+      <li>
+        <code>git pull</code>
+        <p>update the local version of a repository from a remote</p>
+      </li>
+    </ol>
+    <hr />
+    <h3>Clone any github project</h3>
+    <p>
+      <code>git clone https://github.com/username/repository_name.git</code>
+    </p>
+  </body>
+</html>
